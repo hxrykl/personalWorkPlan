@@ -1,0 +1,54 @@
+form {
+  margin: 50rpx 40rpx 0;
+  border-radius: 8rpx;
+  box-shadow: 12rpx 12rpx 20rpx 5rpx #ccc;
+}
+form .cu-form-group {
+  margin-top: 2rpx;
+  border: none !important;
+  
+}
+form .cu-form-group:first-child{
+  border-radius: 8rpx 8rpx 0 0;
+}
+form .cu-form-group:last-child{
+  border-radius: 0 0 8rpx 8rpx;
+}
+radio-group > span{
+  color: var(--theme1);
+  font-size: var(--size32);
+  font-weight: 600;
+  margin: 0 20rpx;
+}
+.title{
+  font-size: var(--size24);
+  color: var(--text6);
+}
+.cu-form-group.nobiao picker::after{
+  display: none !important;
+}
+.cu-form-group.nobiao .picker{
+  text-align: center;
+}
+
+.but{
+  margin: auto;
+}
+.reset,
+.sbumit{
+  width: 150rpx !important;
+  display: inline-block;
+  line-height: 31px;
+  text-align: center;
+  border-radius: 10rpx;
+  margin: 0 30rpx !important;
+  box-shadow: 12rpx 12rpx 20rpx 5rpx #ccc;
+}
+.reset{
+  background-color: var(--assist1) !important;
+  color: #fff !important;
+}
+.sbumit{
+  background-color: var(--theme1) !important;
+  color: #000 !important;
+}

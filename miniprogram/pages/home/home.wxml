@@ -1,0 +1,35 @@
+<cu-custom class="topBar" >
+  <view slot="content">工作安排</view>
+</cu-custom>
+<!-- 列表 -->
+<view wx:if="{{planList.length}}" class="list {{modalName == 'move-box-'+ index ?'toLeft':''}}" wx:for="{{planList}}" wx:key="index" bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
+  <view class="rank">
+    {{item.level}}
+  </view>
+  <view class="name">
+    <view class="name">{{item.title}}</view>
+    <view class="time">{{item.starTime}}--{{item.endTime}}</view>
+  </view>
+  <view class="cate">
+    <view class="cate_name" >
+      <span style="background-color:{{item.typeB}}; color: {{item.typeT}};">{{item.type}}</span>
+    </view>
+    <view class="type" 
+          style="background-color:{{item.state === '已完成' ? 'rgba(255,218,36,0.1)' : 'rgba(82,82,104,0.1)'}}; color:{{item.state === '已完成' ? '#ffda24' : 'rgba(82,82,104,0.5)'}};">
+      <span>{{item.state}}</span>
+      <view class="san"></view>
+    </view>
+    <view class="operation">
+      <view class="opr_su" bindtap="beComplete" data-id="{{item}}" data-index="{{index}}">
+        <span>{{item.state === '已完成' ? '未完' : '完成'}}</span>
+      </view>
+      <view class="opr_top" bindtap="beStick" data-id="{{item}}" data-index="{{index}}">
+        <span>置顶</span>
+      </view>
+      <view class="opr_del" bindtap="beDelete" data-id="{{item}}" data-index="{{index}}">
+        <span>删除</span>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{!planList.length}}" class="no_plan">暂无安排</view>

@@ -1,0 +1,123 @@
+/* miniprogram/pages/home/home.wxss */
+page{
+  overflow-x: hidden;
+}
+.list{
+  margin:20rpx 20rpx 0;
+  background-color: #fff;
+  border-radius: 8rpx;
+  display: flex;
+  padding: 20rpx;
+  transition: all .6s ease-in-out 0s;
+}
+.list.toLeft{
+  transform: translateX(-260rpx);
+
+}
+.rank{
+  flex: 0 0 60rpx;
+  margin-right: 20rpx;
+  color: var(--theme1);
+  font-size: var(--size36);
+  font-weight: 600;
+  line-height: 60rpx;
+  text-align: center;
+}
+.name{
+  flex: 1 1 200rpx;
+}
+.name .name{
+  color: var(--color3);
+  font-weight: 600;
+  font-size: var(--size28);
+}
+.name .time{
+  color: var(--text9);
+  font-size: var(--size24);
+}
+.cate{
+  flex: 0 0 160rpx;
+  position: relative;
+  padding-top: 10rpx;
+}
+.cate .cate_name span{
+  /* line-height: 60rpx; */
+  border-radius: 50rpx;
+  display: inline-block;
+  padding: 5rpx 10rpx;
+  font-size: var(--size24);
+}
+.cate .type{
+  position: absolute;
+  top: -20rpx;
+  right: -20rpx;
+  color: var(--theme1);
+  font-size: var(--size24);
+  background-color: var(--theme3);
+  border-radius: 0 8rpx 8rpx 0;
+  height: 106rpx;
+  line-height: 67rpx;
+  width: 100rpx;
+  text-align: right;
+}
+.cate .type >span{
+  transform:rotateZ(45deg);
+  display: inline-block;
+}
+.cate .type .san{
+  width: 0;
+  height: 0;
+  border: 76rpx solid;
+  border-color: transparent transparent #fff;
+  position: absolute;
+  top: 31rpx;
+  left: -77rpx;
+  transform:rotateZ(-135deg);
+}
+.cate .operation {
+  transition: all .6s ease-in-out 0s;
+  display: none;
+}
+.toLeft .cate .operation {
+  position: absolute;
+  top: -20rpx;
+  right: -290rpx;
+  display: flex;
+  width: 260rpx;
+  height: 102rpx;
+}
+.cate .operation >view {
+  flex: 1 1 50rpx;
+  font-size: var(--size24);
+  line-height: 100rpx;
+  text-align: center;
+  color: #ffffffcc;
+}
+.cate .operation >view span{
+  border-radius: 50%;
+  line-height: 50rpx;
+  display: inline-block;
+  padding: 10rpx;
+}
+
+
+.cate .operation .opr_su span{
+  border: 1rpx solid #39b54a;
+  box-shadow: 5rpx 5rpx 5rpx  #ccc;
+  color: #39b54a;
+}
+.cate .operation .opr_top span{
+  border: 1rpx solid #a5673f;
+  box-shadow: 5rpx 5rpx 5rpx  #ccc;
+  color: #a5673f;
+}
+.cate .operation .opr_del span{
+  border: 1rpx solid #e54d42;
+  box-shadow: 5rpx 5rpx 5rpx  #ccc;
+  color: #e54d42;
+}
+.no_plan{
+  line-height: 40px;
+  color: var(--text6);
+  text-align: center;
+}

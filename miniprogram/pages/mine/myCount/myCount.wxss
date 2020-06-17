@@ -1,0 +1,90 @@
+
+.container1{
+  padding: 10px;
+}
+.pie{
+  width: 100%;
+  height: 180px;
+  background-color: #fff;
+}
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+.line{
+  margin-top: 15px;
+  background-color: #fff;
+  padding: 10px ;
+  border-radius: 4px;
+}
+.line > .item{
+  margin-bottom: 15px;
+}
+.line .name-per{
+  margin-bottom: 3px;
+  color: var(--text3);
+}
+.line .name-per >span:nth-child(2){
+  float: right;
+  color: var(--text9);
+}
+.line-style{
+  background-color: #eaeaea;
+  height: 3px;
+  border-radius: 5px;
+}
+.line-style-in{
+  height: 100%;
+  border-radius: 5px;
+}
+
+.bottom{
+  position: fixed;
+  padding: 0 10px;
+  height: 50px;
+  background-color: #fff;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  box-shadow: 0px 5px 8px 1px #ccc;
+  line-height: 50px;
+}
+.bottom > span:nth-child(1) {
+  padding:10px 15px;
+  color: var(--theme1);
+  font-size: var(--size32);
+  font-weight: 600;
+}
+.bottom > text:nth-child(2){
+  font-size: var(--size32);
+  padding: 10px 0px;
+}
+.rankChoose {
+  position: absolute;
+  top: -378rpx;
+  left: 0rpx;
+  background-color: #fff;
+}
+.rankChoose > view {
+  margin: 10px 0;
+  padding: 0rpx 50rpx;
+}
+  
+.rankChoose > view.active {
+  color: var(--theme1);
+  font-weight: 600;
+}
+.bottom >text:nth-child(4),
+.bottom >text:nth-child(6){
+  padding: 15px 15px;
+  color: var(--text6);
+}
+.bottom >text:nth-child(4){
+  margin-left: 20px;
+}
+.bottom >span:nth-child(5){
+  color: var(--text6);
+}
+  
+  
+  

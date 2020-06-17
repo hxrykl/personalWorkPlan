@@ -1,0 +1,35 @@
+<cu-custom class="topBar" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">类目管理</view>
+</cu-custom>
+
+<view class="content1">
+  <!-- 类目显示 -->
+  <view class="cateName">
+    <view class="cate-item" wx:for="{{cateList}}" wx:key="index" style="background-color: {{item.rgba}}; color: {{item.color}};">
+      {{item.name}}
+      <text class="cuIcon-roundclosefill lg text-gray" wx:if="{{item.id > 3}}" bindtap="toDelCate" data-id="{{item.id}}"></text>
+    </view>
+  </view>
+  <!-- 添加类目按钮 -->
+  <view class="add-cate">
+    <button class="sbumit cu-btn" bindtap="selfCate">
+      自定义
+      <text class="cuIcon-add lg text-gray"></text>
+    </button>
+  </view>
+  <!-- 添加框 -->
+  <view class="add-model" hidden="{{addModel}}">
+    <!-- 输入 -->
+    <view class="cu-form-group">
+      <view class="title" >新类目名</view>
+      <input placeholder="请输入类目名" model:value="{{planName}}"></input>
+    </view>
+    <!-- 确认 -->
+    <view class="but">
+      <button class="reset1 cu-btn" bindtap="quite">取消</button>
+      <button class="sbumit1 cu-btn" bindtap="addCate">添加</button>
+    </view>
+  </view>
+  <view class="zaoceng" hidden="{{addZaoCeng}}"></view>
+</view>

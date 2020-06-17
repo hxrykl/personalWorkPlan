@@ -1,0 +1,56 @@
+<cu-custom class="topBar" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">我的历史</view>
+</cu-custom>
+<!-- 排列时间 -->
+<view class="rankList" style="top: {{tabarH}}px;">
+  <span bindtap="showChoose">时间单位:</span>
+  <span bindtap="showChoose">{{chooseDate}}</span>
+  <text bindtap="showChoose" class="cuIcon-triangledownfill lg text-gray"></text>
+  <view class="rankChoose" hidden="{{showChoose}}"> 
+    <view class="{{chooseDate == item.name ? 'active' : ''}}" wx:for="{{dates}}" wx:key="index" bindtap="chooseItem" data-index="{{item.name}}">{{item.name}}</view>
+  </view>
+</view>
+
+<!-- 历史列表 -->
+<view class="dateT" wx:for="{{dateList}}" wx:for-index="idx" wx:for-item="itemName" wx:key="idx" >
+  <!-- 日期 -->
+  <view class="dataI">
+    <view class="date">
+      <view>{{itemName.date}}</view>
+      <view>{{itemName.dateD}}</view>
+    </view>
+    <view class="num">
+      {{itemName.beNum}}/{{itemName.num}}
+    </view>
+  </view>
+  <!-- 列表 -->
+  <view class="list {{modalName == 'move-box-'+ idx+'-'+index ?'toLeft':''}}" wx:for="{{itemName.planList}}" wx:key="idx+'-'+index"    
+  bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{idx+'-'+index}}">
+    <view class="rank">
+      {{item.level}}
+    </view>
+    <view class="name">
+      <view class="name">{{item.title}}</view>
+      <view class="time">{{item.starTime}}--{{item.endTime}}</view>
+    </view>
+    <view class="cate">
+      <view class="cate_name" >
+        <span style="background-color:{{item.typeB}}; color: {{item.typeT}};">{{item.type}}</span>
+      </view>
+      <view class="type" 
+            style="background-color:{{item.state === '已完成' ? 'rgba(255,218,36,0.1)' : 'rgba(82,82,104,0.1)'}}; color:{{item.state === '已完成' ? '#ffda24' : 'rgba(82,82,104,0.5)'}};">
+        <span>{{item.state}}</span>
+        <view class="san"></view>
+      </view>
+      <view class="operation">
+        <!-- <view class="opr_su">
+          <span>修改</span>
+        </view> -->
+        <view class="opr_del" bindtap="beDelete" data-id="{{item}}" data-item="{{itemName}}">
+          <span>移除</span>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

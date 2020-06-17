@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/mine/mine",
+    "pages/home/home",
+    "pages/list/list",
+    "pages/mine/history/history",
+    "pages/mine/myCount/myCount",
+    "pages/mine/delList/delList",
+    "pages/mine/cate/cate"
+  ],
+  "window": {
+    "backgroundColor": "#ffd924",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffda24",
+    "navigationBarTitleText": "我的行程",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "iconPath": "/images/homen2.png",
+        "selectedIconPath": "/images/homec2.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "iconPath": "/images/addn2.png",
+        "selectedIconPath": "/images/addc1.png",
+        "pagePath": "pages/list/list",
+        "text": "添加"
+      },
+      {
+        "iconPath": "/images/minen2.png",
+        "selectedIconPath": "/images/minec2.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "debug": true
+}

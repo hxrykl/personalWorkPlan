@@ -1,0 +1,90 @@
+/* miniprogram/pages/mine/cate/cate.wxss */
+.content1{
+  padding: 15px 10px;
+}
+
+.cateName{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cate-item{
+  padding: 7px 10px;
+  position: relative;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px 2px 5px 5px;
+}
+.cate-item text{
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  color: var(--text9);
+  font-size: var(--size32);
+  padding: 5px;
+}
+.add-cate{
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -65px;
+}
+.sbumit{
+  width: 100px !important;
+  display: inline-block;
+  line-height: 31px;
+  text-align: center;
+  border-radius: 10rpx;
+  margin: 0 30rpx !important;
+  box-shadow: 12rpx 12rpx 20rpx 5rpx #ccc;
+  background-color: var(--theme1) !important;
+  color: #000 !important;
+}
+.sbumit > text{
+  color: #000;
+  font-size: 36rpx;
+}
+.but{
+  margin: auto;
+}
+.reset1,
+.sbumit1{
+  width: 150rpx !important;
+  display: inline-block;
+  /* padding: 30rpx; */
+  line-height: 31px;
+  text-align: center;
+  border-radius: 10rpx;
+  margin: 0 30rpx !important;
+  box-shadow: 12rpx 12rpx 20rpx 5rpx #ccc;
+}
+.reset1{
+  background-color: var(--assist1) !important;
+  color: #fff !important;
+}
+.sbumit1{
+  background-color: var(--theme1) !important;
+  color: #000 !important;
+}
+
+.add-model{
+  position: fixed;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 4px;
+  left: 50%;
+  top: 50%;
+  margin-left: -125px;
+  margin-top: -60px;
+  z-index: 10;
+  width: 250px;
+}
+.zaoceng{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--assist2);
+}

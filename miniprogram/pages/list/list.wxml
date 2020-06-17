@@ -1,0 +1,74 @@
+<cu-custom class="topBar" >
+  <view slot="content">添加安排</view>
+</cu-custom>
+<!-- 表单 -->
+<form>
+  <!-- 计划名 -->
+  <view class="cu-form-group">
+		<view class="title" >计划名</view>
+		<input placeholder="请输入计划名" model:value="{{planName}}"></input>
+	</view>
+  <!-- 计划名结束 -->
+  <!-- 计划分类 -->
+  <view class="cu-form-group">
+		<view class="title">计划分类</view>
+		<picker bindchange="catePickerChange" value="{{cateIndex}}" range="{{catePicker}}">
+			<view class="picker">
+				{{cateIndex ? catePicker[cateIndex] : '请选择分类'}}
+			</view>
+		</picker>
+	</view>
+  <!-- 计划分类结束 -->
+  <!-- 计划优先级 -->
+  <view class="cu-form-group">
+    <view class="title">计划优先级</view>
+    <radio-group bindchange="radioChange">
+      <span>I</span><radio checked="{{level === 'I'}}" class="orange" value="I" color="#ffda24"/> 
+      <span>II</span><radio checked="{{level === 'II'}}" class="orange" value="II" color="#ffda24"/> 
+      <span>III</span><radio checked="{{level === 'III'}}" class="orange" value="III" color="#ffda24"/>  
+    </radio-group>
+  </view>
+  <!-- 计划优先级结束 -->
+  <!-- 计划开始日期 -->
+  <view class="cu-form-group nobiao">
+		<view class="title">开始日期</view>
+		<picker mode="date" value="{{starDate}}"   bindchange="starDateChange">
+			<view class="picker">
+				{{starDate}}
+			</view>
+		</picker>
+    <view class="title">时间</view>
+		<picker mode="time" value="{{starTime}}"  bindchange="starTimeChange">
+			<view class="picker">
+				{{starTime}}
+			</view>
+		</picker>
+	</view>
+  <!-- 计划开始日期结束 -->
+  <!-- 计划结束日期 -->
+  <view class="cu-form-group nobiao">
+		<view class="title">结束日期</view>
+		<picker mode="date" value="{{endDate}}"   bindchange="endDateChange">
+			<view class="picker">
+				{{endDate}}
+			</view>
+		</picker>
+    <view class="title">时间</view>
+		<picker mode="time" value="{{endTime}}"  bindchange="endTimeChange">
+			<view class="picker">
+				{{endTime}}
+			</view>
+		</picker>
+	</view>
+  <!-- 计划结束日期结束 -->
+  <!-- 计划详情 -->
+  <view class="cu-form-group margin-top">
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="描述计划详细" model:value="{{textareaAValue}}"></textarea>
+	</view>
+  <!-- 计划详情结束 -->
+</form>
+<view class="but">
+	<button class="reset cu-btn" bindtap="retrunData">重置</button>
+	<button class="sbumit cu-btn" bindtap="submitData">提交</button>
+
+</view>

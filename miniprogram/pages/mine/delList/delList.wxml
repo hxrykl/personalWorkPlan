@@ -1,0 +1,4 @@
+<cu-custom class="topBar" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">已删除计划</view>
+</cu-custom>

@@ -1,0 +1,49 @@
+<cu-custom class="topBar" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">我的统计</view>
+</cu-custom>
+
+<view class="container1">
+
+  <view class="pie">
+    <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}"></ec-canvas>
+  </view>
+
+  <view class="line">
+    <view class="item" wx:for="{{lineData}}" wx:key="index">
+      <!-- <view class="icon">
+        <text class="cuIcon-{{item.icon}} lg text-gray"></text>
+      </view> -->
+      <view class="data">
+        <view class="name-per">
+          <span>{{item.name}}</span>
+          <span>{{item.data}}%</span>
+        </view>
+        <view class="line-style">
+          <view class="line-style-in" style="width:{{item.data}}%;background-color:{{item.color}}"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="bottom">
+    <!-- 当前选择类型 -->
+    <span bindtap="showChoose">{{chooseDate}}</span>
+    <text bindtap="showChoose" class="cuIcon-triangledownfill lg text-gray"></text>
+    <!-- 时间类型选择 -->
+    <view class="rankChoose" hidden="{{showChoose}}"> 
+      <view class="{{chooseDate == item.name ? 'active' : ''}}" wx:for="{{dates}}" wx:key="index" bindtap="chooseItem" data-index="{{item.name}}">
+        {{item.name}}
+      </view>
+    </view>
+    <!-- 选择上一段时间 -->
+    <text bindtap="lastTime" class="cuIcon-back lg text-gray"></text>
+    <!-- 当前时间 -->
+    <span class="newTime">
+      {{newTime.time}}
+    </span>
+    <!-- 选择下一段时间 -->
+    <text bindtap="nextTime" class="cuIcon-right lg text-gray"></text>
+  </view>
+</view>
+

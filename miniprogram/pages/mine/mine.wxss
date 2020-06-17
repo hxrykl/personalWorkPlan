@@ -1,0 +1,37 @@
+
+
+.userinfo-avatar[size] {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  display: block;
+  margin-top: 0;
+}
+.userinfo {
+  margin: 0rpx;
+  height: 300rpx;
+  display: block;
+  background-color: var(--theme1);
+  border: none;
+  padding-top: 50rpx;
+  font-size: var(--size32);
+}
+
+.menu {
+  border-radius: 30rpx;
+  background-color: #fff;
+  margin: 30rpx;
+  padding: 0 30rpx;
+  line-height: 110rpx;
+  font-size: var(--size32);
+  
+}
+.menu view{
+  color: var(--text9);
+  font-size: var(--size28);
+  font-weight: 600;
+}
+.menu .icon {
+  float: right;
+  color: var(--text9);
+}

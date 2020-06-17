@@ -1,0 +1,35 @@
+<cu-custom class="topBar" >
+  <view slot="content">个人中心</view>
+</cu-custom>
+<view class="mine">
+  <!-- 用户基本信息 -->
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{userPhoto}})"
+      size="default"
+    ></button>
+    <view style="text-align: center; color: #333; font-weight: 600;">{{userName}}</view>
+  </view>
+  <!-- 菜单栏 -->
+  <view class="menu">
+    <view bindtap="toHistory">
+      我的历史
+      <text class="cuIcon-right icon"></text>
+    </view>
+    <view bindtap="toCount"> 
+      我的统计
+      <text class="cuIcon-right icon"></text>
+    </view>
+    <view bindtap="toCateOpt"> 
+      类目管理
+      <text class="cuIcon-right icon"></text>
+    </view>
+    <view bindtap="toDelList"> 
+      已删除计划
+      <text class="cuIcon-right icon"></text>
+    </view>
+  </view>
+</view>
